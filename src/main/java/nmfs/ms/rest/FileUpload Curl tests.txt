@@ -1,0 +1,18 @@
+8. cURL Testing
+More testing with cURL command.
+8.1 Test single file upload.
+Terminal
+$ curl -F file=@"f:\\data.txt" http://localhost:8080/api/upload/
+Successfully uploaded - data.txt
+8.2 Test multiple file upload.
+Terminal
+$ curl -F extraField="abc" -F files=@"f://data.txt" -F files=@"f://data2.txt"  http://localhost:8080/api/upload/multi/
+Successfully uploaded - data.txt , data2.txt
+8.3 Test multiple file upload, maps to Model.
+Terminal
+$ curl -F extraField="abc" -F files=@"f://data.txt" -F files=@"f://data2.txt"  http://localhost:8080/api/upload/multi/model
+Successfully uploaded!
+8.4 Test a large movie file (100MB), the following error message will be displayed.
+Terminal
+$ curl -F file=@"F://movies//300//Sample.mkv"  http://localhost:8080/api/upload/
+Attachment size exceeds the allowable limit! (10MB)
