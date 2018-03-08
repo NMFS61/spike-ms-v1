@@ -1,5 +1,7 @@
 package nmfs.ms.rest;
 
+import nmfs.ms.dal.mongo.CustomerDAO;
+import nmfs.ms.model.Customer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,13 @@ public class DemoController {
 	    
 		  return new ResponseEntity<String>("Up and Running", HttpStatus.OK);
 	    }
+	@RequestMapping(value = "/mongotest", method = RequestMethod.GET)
+	public ResponseEntity<String> mongoDBTest() {
+
+		CustomerDAO dao=new CustomerDAO();
+		dao.insertOne(new Customer("Bora","Uzun"));
+		return new ResponseEntity<String>("Up and Running", HttpStatus.OK);
+	}
 	 @RequestMapping(value = "/insertOne", method = RequestMethod.POST)
 	 public ResponseEntity<String> insertOne() {
 		    

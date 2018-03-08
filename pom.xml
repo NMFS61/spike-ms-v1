@@ -11,6 +11,8 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-data-releasetrain.version>Ingalls-SR7</spring-data-releasetrain.version>
+
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -78,7 +80,16 @@
         <version>4.3.7.RELEASE</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-mongodb</artifactId>
+    </dependency>
+    <!--<dependency>-->
+        <!--<groupId>org.springframework.data</groupId>-->
+        <!--<artifactId>spring-data-mongodb</artifactId>-->
+        <!--<version>1.9.6.RELEASE</version>-->
+    <!--</dependency>-->
+
     <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
