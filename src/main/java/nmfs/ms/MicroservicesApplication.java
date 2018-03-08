@@ -1,5 +1,6 @@
 package nmfs.ms;
 
+import org.apache.camel.impl.DefaultCamelContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,12 +16,15 @@ import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan({"nmfs.ms","nmfs.ms.rest"})
+//@ComponentScan({"nmfs.ms","nmfs.ms.rest","nmfs.ms.config"})
+@ComponentScan("nmfs.ms")
+
 public class MicroservicesApplication {
 
 	public static void main(String[] args) {
 		//SpringApplication.run(MicroservicesApplication.class, args);
         ApplicationContext context = SpringApplication.run(MicroservicesApplication.class, args);
+        //context.getBean(DefaultCamelContext.class);
 
         try {Thread.sleep(300 * 60000); // minutes
         }catch (Exception ex) {}
