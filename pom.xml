@@ -9,10 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring-data-releasetrain.version>Ingalls-SR7</spring-data-releasetrain.version>
-
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,45 +19,10 @@
         <version>1.5.3.RELEASE</version>
         <relativePath />
     </parent>
+
 <dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter</artifactId>
-    </dependency>
 
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-web</artifactId>
-        <version>4.3.13.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-autoconfigure</artifactId>
-        <version>1.5.9.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot</artifactId>
-        <version>1.5.3.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-test</artifactId>
-        <version>4.3.13.RELEASE</version>
-        <scope>test</scope>
-    </dependency>
-
+<!-- Standard libraries - Unit Test, Lombok , JSON-->
     <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -66,44 +30,28 @@
         <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>4.3.7.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>4.3.7.RELEASE</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-mongodb</artifactId>
-    </dependency>
-    <!--<dependency>-->
-        <!--<groupId>org.springframework.data</groupId>-->
-        <!--<artifactId>spring-data-mongodb</artifactId>-->
-        <!--<version>1.9.6.RELEASE</version>-->
-    <!--</dependency>-->
-
-    <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>1.16.20</version>
         <scope>provided</scope>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
         <version>2.9.4</version>
     </dependency>
-    <!-- rest -->
+    <!-- End of Standard libraries - Unit Test, Lombok , JSON-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-mongodb</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+
 
 
 </dependencies>
