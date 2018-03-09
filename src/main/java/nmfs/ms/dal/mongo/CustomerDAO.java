@@ -1,6 +1,5 @@
 package nmfs.ms.dal.mongo;
 
-import com.mongodb.WriteResult;
 import nmfs.ms.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -8,21 +7,18 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Update;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+
+import org.springframework.stereotype.Component;
+
 
 import java.util.List;
 
-@Repository
+@Component
 public class CustomerDAO {
 
     @Autowired
     private CustomerRepository repository;
 
-//    @Autowired
-//    MongoTemplate mongoTemplate;
 
     public void insertOne(Customer c) {
 
@@ -34,10 +30,6 @@ public class CustomerDAO {
         repository.deleteAll();
     }
 
-    public void searchByName(String name) {
-
-        Customer c=repository.findByFirstName(name);
-    }
 
     public void searchBy1() {
 

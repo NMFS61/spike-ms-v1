@@ -1,10 +1,12 @@
 package nmfs.ms.rest;
 
 import nmfs.ms.dal.mongo.CustomerDAO;
+import nmfs.ms.dal.mongo.CustomerRepository;
 import nmfs.ms.model.Customer;
+import nmfs.ms.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,8 @@ import nmfs.ms.model.Person;
 @RequestMapping(value="/demo")
 public class DemoController {
 
+    @Autowired
+    private DemoService demoService;
 	@RequestMapping(value = "/health", method = RequestMethod.GET)
 	    public ResponseEntity<String> post(@RequestParam("data")String payload) {
 	    
@@ -25,8 +29,9 @@ public class DemoController {
 	@RequestMapping(value = "/mongotest", method = RequestMethod.GET)
 	public ResponseEntity<String> mongoDBTest() {
 
-		CustomerDAO dao=new CustomerDAO();
-		dao.insertOne(new Customer("Bora","Uzun"));
+
+        demoService.testService(new Customer("Bora","Uzun"));
+        //repository.save(new Customer("Bora","Uzun"));
 		return new ResponseEntity<String>("Up and Running", HttpStatus.OK);
 	}
 	 @RequestMapping(value = "/insertOne", method = RequestMethod.POST)

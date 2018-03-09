@@ -15,7 +15,7 @@ import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan({"nmfs.ms","nmfs.ms.rest"})
+@ComponentScan("nmfs.ms")
 public class MicroservicesApplication {
 
 	public static void main(String[] args) {
