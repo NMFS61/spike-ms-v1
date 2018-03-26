@@ -3,3 +3,19 @@ MongoClientURI uri = new MongoClientURI(
 
 MongoClient mongoClient = new MongoClient(uri);
 MongoDatabase database = mongoClient.getDatabase("test");
+
+RETURN RESPONSE
+ {
+   "status":"true",
+   "errorList":[
+      [
+         "name",
+         "can not be null"
+      ],
+      [
+         "name",
+         "can not be null"
+      ]
+   ],
+   "additionalInfo":null
+}
