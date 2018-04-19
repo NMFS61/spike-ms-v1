@@ -57,6 +57,12 @@
         <scope>test</scope>
     </dependency>
 
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+
     <!-- Embedded Mongo for Tests -->
     <dependency>
         <groupId>de.flapdoodle.embed</groupId>
