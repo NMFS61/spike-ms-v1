@@ -57,7 +57,19 @@
         <scope>test</scope>
     </dependency>
 
+    <!-- Embedded Mongo for Tests -->
+    <dependency>
+        <groupId>de.flapdoodle.embed</groupId>
+        <artifactId>de.flapdoodle.embed.mongo</artifactId>
+        <version>2.0.3</version>
+        <scope>test</scope>
+    </dependency>
 
+    <!-- Embedded Kafka for Tests -->
+    <dependency>
+        <groupId>org.springframework.kafka</groupId>
+        <artifactId>spring-kafka-test</artifactId>
+    </dependency>
 
 
 </dependencies>

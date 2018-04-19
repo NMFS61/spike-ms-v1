@@ -2,6 +2,7 @@ package nmfs.ms.bpl.compulsory;
 
 import nmfs.ms.model.expense.Expense;
 import nmfs.ms.model.response.ErrorList;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +15,9 @@ public class ExpenseCompulsoryChecks {
 
         // Then the other compulsary checks:
 
-        if(isStringEmptyOrNull(expense.getAmount())) {
+        if(StringUtils.isEmpty(expense.getAmount())) {
             list.add(ErrorList.builder().field("Amount").issue("can not be null").build());
         }
-
 
         return list;
     }
@@ -27,14 +27,6 @@ public class ExpenseCompulsoryChecks {
         List<ErrorList> list=new ArrayList<>();
 
         return list;
-    }
-
-    private boolean isStringEmptyOrNull(String str)
-    {
-        boolean retVal=true;
-        if(str != null && !str.isEmpty()) {retVal=false;}
-
-        return retVal;
     }
 
 }
