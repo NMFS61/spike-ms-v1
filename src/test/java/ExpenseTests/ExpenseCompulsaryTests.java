@@ -44,12 +44,14 @@ public class ExpenseCompulsaryTests {
                 .departmentsToApprove("")
                 .build();
     }
+
     @Test
     public void shouldReturnZeroCompulsaryErrorsForValidExpense(){
         ExpenseControlBPL expenseControl=new ExpenseControlBPL();
         //nmfs.ms.bpl.compulsory.ExpenseCompulsoryChecks compulsoryChecks=new ExpenseCompulsoryChecks();
         assertThat(expenseControls.doCompulsoryCheck(validExpense).size(),is(0) );
     }
+
     @Test
     public void shouldReturnCompulsaryErrorsForInvalidExpense(){
         ExpenseControlBPL expenseControl=new ExpenseControlBPL();
