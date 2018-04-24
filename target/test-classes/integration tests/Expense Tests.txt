@@ -1,0 +1,5 @@
+1. (C)reate an expense
+{"id":null,"payee":{"id":"1","name":"B U","address":"address"},"description":"Coffee at costa","expenseType":"Meal","paidBy":"B U","amount":"11.14","receipt":"Yes","vat":".2","departmentsToApprove":"","date":1524564255924}
+
+2. (C)reate multiple expenses
+[{"id":null,"payee":{"id":"1","name":"B U","address":"address"},"description":"Coffee at costa","expenseType":"Meal","paidBy":"B U","amount":"11.14","receipt":"Yes","vat":".2","departmentsToApprove":"","date":1524564613318},{"id":null,"payee":{"id":"1","name":"B U","address":"address"},"description":"Food","expenseType":"Meal","paidBy":"B U","amount":"11.15","receipt":"Yes","vat":".2","departmentsToApprove":"","date":1524564613318}]
