@@ -17,10 +17,22 @@ public class GeneralTests {
         System.out.println(createAnExpenseJsonString());
         System.out.println("2. (C)reate multiple expenses ");
         System.out.println(createMultipleExpenseJsonString());
-
+        System.out.println("3. (R)ead expense ");
+        System.out.println(queryAnExpenseJson());
     }
 
-    public static String createAnExpenseJsonString() throws JsonProcessingException {
+    public static String queryAnExpenseJson() throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        Expense expense= Expense.builder().expenseType("Meal")
+                .amount("11.14")
+                .paidBy("B U")
+                .receipt("Yes")
+                .build();
+        String queryAsJsonString = mapper.writeValueAsString(expense);
+        return queryAsJsonString;
+    }
+
+        public static String createAnExpenseJsonString() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         Expense expense= Expense.builder().expenseType("Meal")
                 .amount("11.14")
